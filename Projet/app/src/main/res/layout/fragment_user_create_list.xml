@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mobg5.filmbox.ui.profile.UserCreateMovieListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.mobg5.filmbox.ui.profile.UserCreateMovieListFragment">
+
+        <EditText
+            android:id="@+id/list_title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="188dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/add_list_edit"
+            android:hint="@string/hint_add_list"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:text="@{viewModel.titleList}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:autofillHints=""
+            android:inputType="text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fab_create_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginEnd="48dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:contentDescription="@string/description_create_list"
+            android:text="@string/text_button_add_list"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="popular"
+            type="com.mobg5.filmbox.data.model.ResultsMovies"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <ImageView
+            android:id="@+id/movie_image_popular"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            app:imageUrl="@{@string/poster_path(popular.posterPath)}"
+            android:contentDescription="@string/description_popular_movie" />
+
+    </FrameLayout>
+
+</layout>

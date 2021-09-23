@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#9b9d9e</color>
+    <color name="mainColorStart">#2C3E50</color>
+    <color name="mainColorEnd">#4CA1AF</color>
+
+    <!-- APP BASE -->
+    <color name="colorPrimary">#333333</color>
+    <color name="colorPrimaryDark">#292929</color>
+    <color name="colorAccent">#2E7DAE</color>
+    <color name="colorBottomNav">#252323</color>
+    <color name="colorFab">#3D7F8B</color>
+
+</resources>

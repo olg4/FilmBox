@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_below="@+id/activity_main_toolbar">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mobg5.filmbox.service.ExploreViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/explore_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.mobg5.filmbox.service.ExploreFragment">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.widget.ActionMenuView
+                android:id="@+id/page_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="2dp">
+
+                <ImageButton
+                    android:id="@+id/explore_previous_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_left_arrow"
+                    app:borderWidth="0dp"
+                    android:contentDescription="@string/previous_page_button" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/movies_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:clickable="false"
+                    android:text="@string/type_category_button_content"
+                    android:backgroundTint="@color/colorPrimaryDark"/>
+
+                <ImageButton
+                    android:id="@+id/explore_next_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_right_arrow"
+                    app:borderWidth="0dp"
+                    android:contentDescription="@string/next_page_button" />
+
+            </android.widget.ActionMenuView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:textColor="@color/grey"
+                    android:text="@string/page_num"/>
+
+                <TextView
+                    android:id="@+id/page_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/grey"
+                    android:text="@{String.valueOf(viewModel.n)}"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/total_results"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey"
+                    android:layout_marginStart="24dp"
+                    android:textSize="12sp"
+                    android:text="@{String.valueOf(viewModel.totalResults)}"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_results"
+                    android:textColor="@color/grey"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movies_grid"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="145dp"
+            android:layout_marginBottom="50dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:listMovie="@{viewModel.moviesResults}"
+            app:spanCount="2"
+            tools:listitem="@layout/grid_movie"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

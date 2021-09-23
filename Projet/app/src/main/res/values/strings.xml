@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">FilmBox</string>
+
+    <!-- Bottom Navigation Bar -->
+    <string name="bottom_nav_menu_home">Home</string>
+    <string name="bottom_nav_menu_explore">Explore</string>
+    <string name="bottom_nav_menu_random">Random</string>
+    <string name="bottom_nav_menu_profile">Profile</string>
+
+    <!-- Search Fragment -->
+    <string name="search_hint"><font fgcolor='#C4C4C4'>Find Movies</font></string>
+    <string name="description_search_mini_image">Movie</string>
+
+    <!-- Details Movie Fragment -->
+    <string name="movie_details_image">Poster</string>
+    <string name="max_note">/10</string>
+    <string name="add_to_list_button">+ Add to a list</string>
+    <string name="profile_to_lists">My Lists</string>
+    <string name="star_rate_image">Note</string>
+
+    <!-- Home Fragment -->
+    <string name="upcoming_movies_home_page"><b>Upcoming Movies</b></string>
+    <string name="popular_movies_home_page"><b>Popular Movies</b></string>
+    <string name="top_rated_movies_home_page"><b>Top Rated Movies</b></string>
+    <string name="now_playing_movies_home_page"><b>In Theaters Now</b></string>
+    <string name="description_now_playing_movie">In Theaters Now</string>
+    <string name="description_upcoming_movie"><b>Upcoming Movie</b></string>
+    <string name="description_popular_movie"><b>Popular Movie</b></string>
+    <string name="description_top_rated_movie"><b>Top Rated Movie</b></string>
+
+    <!-- Explore Fragment -->
+    <string name="page_num">page </string>
+    <string name="total_results">results</string>
+    <string name="previous_page_button">Previous Page Button</string>
+    <string name="next_page_button">Next Page Button</string>
+    <string name="description_movie_image">Movie</string>
+    <string name="type_category_button_content">Movies</string>
+
+    <!-- Random Fragment -->
+    <string name="random_button"><b>press the white button for a random movie</b></string>
+    <string name="description_random_button">Random Button</string>
+    <string name="description_random_image">Random Image</string>
+
+    <!-- Profile Fragment -->
+    <string name="pointer_to_my_lists">My Lists</string>
+
+    <!-- Create List Fragment -->
+    <string name="description_add">New List</string>
+    <string name="description_create_list">New List</string>
+    <string name="hint_add_list">Add a list</string>
+    <string name="text_button_add_list">Add</string>
+
+    <!-- List of User's Movies Fragment -->
+    <string name="description_list_mini_image">Movie</string>
+
+    <!-- Login Activity -->
+    <string name="title_activity_login">FilmBox</string>
+    <string name="prompt_email">Email</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Logged as</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- About Fragment -->
+    <string name="about_item">About</string>
+    <string name="about_title">About FilmBox</string>
+    <string name="about_developer"><b>Developer:</b> Olga Baitemirova 52191</string>
+    <string name="about_app">FilmBox is a source for movies directly related to The Movie Database</string>
+
+    <string name="logo_description">Application Logo</string>
+
+    <string name="poster_path">http://image.tmdb.org/t/p/w780%s</string>
+</resources>

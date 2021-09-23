@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="list"
+            type="com.mobg5.filmbox.data.model.UserListMovies"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/list_cardView"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/user_list"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="15sp"
+                    android:text="@{list.title}"
+                    tools:src="@tools:sample/backgrounds/scenic"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</layout>

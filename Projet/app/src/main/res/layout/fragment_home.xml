@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mobg5.filmbox.service.HomeViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.mobg5.filmbox.service.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/home_category_upcoming_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upcoming_movies_home_page"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/upcoming_movies_size"
+                    android:layout_marginTop="5dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movies_horizontal_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:clipToPadding="false"
+                    android:layout_marginBottom="30dp"
+                    android:scaleType="fitXY"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:listUpcoming="@{viewModel.upcomingMovies}"
+                    tools:listitem="@layout/horizontal_scroll_movie" />
+
+                <TextView
+                    android:id="@+id/home_category_now_playing_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/now_playing_movies_home_page"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/upcoming_movies_size"
+                    android:layout_marginTop="5dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movies_horizontal_scroll_now_playing"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:clipToPadding="false"
+                    android:scaleType="fitXY"
+                    android:layout_marginBottom="30dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:listNowPlaying="@{viewModel.nowPlayingMovies}"
+                    tools:listitem="@layout/horizontal_scroll_now_playing" />
+
+                <TextView
+                    android:id="@+id/home_category_top_rated_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/top_rated_movies_home_page"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/upcoming_movies_size"
+                    android:layout_marginTop="5dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movies_horizontal_scroll_top_rated"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:clipToPadding="false"
+                    android:scaleType="fitXY"
+                    android:layout_marginBottom="30dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:listTopRated="@{viewModel.topRatedMovies}"
+                    tools:listitem="@layout/horizontal_scroll_top_rated" />
+
+                <TextView
+                    android:id="@+id/home_category_popular_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/popular_movies_home_page"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/upcoming_movies_size"
+                    android:layout_marginTop="5dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movies_horizontal_scroll_popular"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:clipToPadding="false"
+                    android:scaleType="fitXY"
+                    android:layout_marginBottom="150dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:listPopular="@{viewModel.popularMovies}"
+                    tools:listitem="@layout/horizontal_scroll_popular" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>
