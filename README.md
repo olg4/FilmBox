@@ -1,2 +1,5 @@
-
-![alt text](https://github.com/olg4/FilmBox/filmbox.png?raw=true)
+<img
+  src="/img/filmbox.png"
+  alt="Alt text"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
